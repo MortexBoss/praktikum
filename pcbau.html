@@ -50,6 +50,36 @@
                 <label>Suchbegriff <input name="q" value="Free Robux"></label>
                 <button name="b" value="Find!!!">Volltextsuche</button>
               </form>
+              <hr/>
+
+              <form>
+                <label for="groesse">Größe: 
+                  <input id="groesse" type="number" min="100" max="220" step="1" value="175">
+                cm</label>
+              <br>
+                <label for="masse">Masse: 
+                  <input id="masse" type="number" min="30" max="225" step="0.1" value="75">
+                kg</label>
+              <br>
+                <label>BMI:
+                  <output id="bmi"></output>
+                </label>
+              <br>
+                <button type="button" id="berechnen">BMI berechnen</button>
+              </form>
+              <script>
+                document.querySelector('#berechnen').addEventListener('click', berechne_BMI);
+ 
+                function berechne_BMI () {
+                  var groesse = parseInt(document.getElementById("groesse").value),
+                      masse = parseInt(document.getElementById("masse").value),
+                      bmi = Math.round(100000 * masse / (groesse * groesse)) / 10;
+                      
+                  document.querySelector("output").textContent = bmi;
+                }
+              </script>
+              <hr/> 
+              <div id="wcom-6882769ee246aafe2f1f46490798c3d0" class="wcom-default w300x250" style="border: 1px solid #CCC; background-color: #FCFCFC; border-radius: 5px"><link rel="stylesheet" href="//cs3.wettercomassets.com/woys/5/css/w.css" media="all"><div class="wcom-city"><a style="color: #000" href="https://www.wetter.com/deutschland/berlin/DE0001020.html" target="_blank" rel="nofollow" aria-label="Wetter Berlin" title="Wetter Berlin">Wetter Berlin</a></div><div id="wcom-6882769ee246aafe2f1f46490798c3d0-weather"></div><script type="text/javascript" src="//cs3.wettercomassets.com/woys/5/js/w.js"></script><script type="text/javascript">_wcomWidget({id: 'wcom-6882769ee246aafe2f1f46490798c3d0',location: 'DE0001020',format: '300x250',type: 'summary'});</script></div>
 
         
 
